@@ -5,3 +5,8 @@ tasks and subtasks by project manager. The project manager make team of develope
 in a particular domain and then assign project to that team. Developers can attach their work files after accomplishing their
 assigned task. This tool also gives alerts when the deadline of projects or tasks coming nearer. Project manager able to track
 the progress of multiple projects at a same time in order to meet deadlines of projects.
+
+# Installation
+1. Put the project in Wamp, Xampp or EasyPHP etc.
+2. Import database (PPS.sql).
+3. Run index.php
