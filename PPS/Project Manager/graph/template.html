@@ -1,0 +1,59 @@
+<html>
+<head>
+  <script type="text/javascript" src="loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['gantt']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function daysToMilliseconds(days) {
+      return days * 24 * 60 * 60 * 1000;
+    }
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Task ID');
+      data.addColumn('string', 'Task Name');
+      data.addColumn('string', 'Project Status');
+      data.addColumn('date', 'Start Date');
+      data.addColumn('date', 'End Date');
+      data.addColumn('number', 'Duration');
+      data.addColumn('number', 'Percent Complete');
+      data.addColumn('string', 'Dependencies');
+
+      data.addRows([
+	  ///task id//////task name/////////status//////////start date///////////end date//////tasktomili//prog//dependency
+	  
+		
+		
+		
+		
+		
+		
+      ]);
+
+     var options = {
+          height: 700,
+          gantt: {
+            criticalPathEnabled: false,
+            criticalPathStyle: {
+              stroke: '#e64a19',
+              strokeWidth: 5
+            }
+          }
+        };
+
+      var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
+
+      chart.draw(data, options);
+    }
+  </script>
+</head>
+<body>
+<br><br>
+<center><h2>Gantt Chart</h2>
+<br>
+  <div id="chart_div"></div>
+
+</body>
+</html>
